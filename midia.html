@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mídia em HTML5</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icons/contrato.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icons/contrato.png" type="image/x-icon">
 </head>
 <body>
     <h1>Mídia em HTML5</h1>
     <hr>
             <h2>Imagens</h2>
-                <p>Para utilizarmos imagems no documento html5 basta apenas usarmos a tag <code>&lt;img src="<abbr title="Local aonde está a imagem">x</abbr>" alt="<abbr title="Teste alternativo, Para identifica o que é a imagem, basicamente um texto descrevendo">y</abbr>"&gt;</code></p>
+                <p>Para utilizarmos imagens no documento html5 basta apenas usarmos a tag <code>&lt;img src="<abbr title="Local aonde está a imagem">x</abbr>" alt="<abbr title="Teste alternativo, Para identifica o que é a imagem, basicamente um texto descrevendo">y</abbr>"&gt;</code></p>
                 <p>Podemos carregar imagens que estão na mesma pasta do index.html também podemos carregar imagens que estão em outra pasta e podemos carregar imagens usando links externos</p>
                 <img src="img/imagens-em-html.png" alt="Alguns termos importantes para imagens em HTML5" >
             
-            <h3>Imagens Dinamicas</h3>
-                <p>Podemos colocar imagens dinamicas em sites usando a tag <code>&lt;picture&gt;&lt;/picture&gt;</code> e dentro da tag picture podemos usamos a tag já conhecida <code>&lt;img&gt;</code> para colocarmos a imagem principal, e depois usamos a tag <code>&lt;source media="(min-width: )" srcset="" type="image/"&gt;</code> sempre da maior imagem para a maior, veja o exemplo:
+            <h3>Imagens dinâmicas</h3>
+                <p>Podemos colocar imagens dinâmicas em sites usando a tag <code>&lt;picture&gt;&lt;/picture&gt;</code> e dentro da tag picture utilizamos a tag já conhecida <code>&lt;img&gt;</code> para colocarmos a imagem principal, e depois usamos a tag <code>&lt;source media="(min-width: )" srcset="" type="image/"&gt;</code> sempre da maior imagem para a maior, veja o exemplo:
     <pre> 
 &lt;picture&gt;
         &lt;source media="(max-width: <abbr title="Largura maxima da imagem">x</abbr>)" srcset="<abbr title="local da imagem">x</abbr>" type="image/png"&gt; <em>Imagem Pequena</em>
@@ -24,10 +24,10 @@
         &lt;img src="<abbr title="Local da imagem">x</abbr>" alt="<abbr title="nome alternativo da imagem">y</abbr>"&gt; <em>Imagem Original maior</em>
 &lt;/picture&gt;
     </pre>
-            <h3>Note que a tag &lt;source&gt; possui três autributos:</h3>
+            <h3>Note que a tag &lt;source&gt; possui três atributos:</h3>
                     <p><code>type</code> vai indicar o <em>media type</em> da imagem <br></p>
                     <p><code>srcset</code> vai configurar o nome da imagem que será carregada quando o tamanho indicado for atingido</p>
-                    <p><code>media</code> indica o tamanho maximo a ser considerado para carregar a imagem indicada no autributo <code>srcset</code></p>
+                    <p><code>media</code> indica o tamanho máximo a ser considerado para carregar a imagem indicada no atributo <code>srcset</code></p>
 
             <h3>Exemplo de imagem dinâmica</h3>
             <p>Tente abrir esse site em diversos dispositivos ou simplesmente diminua ou aumente o tamanho do seu navegador</p>
@@ -38,7 +38,7 @@
     </picture>
 
             <h3>Trocar o Favicon da pagina</h3></li>
-                <code>&lt;link rel="<em><abbr title="Parámetro utilizado">shortcut icon</abbr>" href</em>="<em><abbr title="local que a imagem que será utilizada como icone está">x</abbr></em>" type="<em><abbr title="Tipo de arquivo que será utlizado">image/x-icon</abbr></em>"&gt;</code>
+                <code>&lt;link rel="<em><abbr title="Parâmetro utilizado">shortcut icon</abbr>" href</em>="<em><abbr title="local que a imagem que será utilizada como ícone está">x</abbr></em>" type="<em><abbr title="Tipo de arquivo que será utilizado">image/x-icon</abbr></em>"&gt;</code>
                 <hr>
     <h2>Áudio</h2>
         <p>Podemos adicionar áudio aos documentos em html5 usando a tag &lt;audio&gt; e algumas tags &lt;source&gt;</p>
@@ -50,10 +50,10 @@
         <pre>
     &lt;audio preload="auto" autoplay controls&gt; <em>Tag principal com alguns atributos que serão explicados logo abaixo</em>
         &lt;source src="midia/guanacast-33.mp3" type="audio/mpeg"&gt; <em>Primeira opção que o navegador tentará carregar, caso não consiga irá para o source de baixo</em>
-        &lt;source src="midia/guanacast-33.ogg" type="midia/ogg"&gt; <em>Podemos adicionar arquivos de diferentes tipos para diferentes navegadores tentarem carregar</em>
-        &lt;source src="midia/guanacast-33.wav" type="midia/wav"&gt; <em> Arquivos .mp3 .ogg e .wav são suportados</em>
-        &lt;p>Infelizmente seu navegador não suporta áudio, Baixe o arquivo de áudio &lt;a href="midia/happy-mistake.mp3" dawload>aqui&lt;/a&gt;&lt;/p&gt; 
-    &lt;/audio&gt; <em>Caso nenhum source seja carregado, Apareceça essa mensagem &uarr;</em>
+        &lt;source src="midia/guanacast-33.ogg" type="audio/ogg"&gt; <em>Podemos adicionar arquivos de diferentes tipos para diferentes navegadores tentarem carregar</em>
+        &lt;source src="midia/guanacast-33.wav" type="audio/wav"&gt; <em> Arquivos .mp3 .ogg e .wav são suportados</em>
+        &lt;p>Infelizmente seu navegador não suporta áudio, Baixe o arquivo de áudio &lt;a href="midia/happy-mistake.mp3" download>aqui&lt;/a&gt;&lt;/p&gt; 
+    &lt;/audio&gt; <em>Caso nenhum source seja carregado, Aparecerá essa mensagem &uarr;</em>
         </pre>
         <h2>Principais Atributos da tag <code>&lt;audio&gt;</code></h2>
         <dl>
@@ -61,7 +61,7 @@
             <dd>indica se o áudio será pre-carregado ou não aceitando três valores: <br>
             <strong><code>metadata</code>:</strong> carrega apenas informações sobre o arquivo. <br>
             <strong><code>none</code>:</strong> não irá carregar nada, até que seja iniciado a reprodução <br>
-            <strong><code>auto</code>:</strong> irá carregar todo o arquivo de audio assim que a página for carregada</dd>
+            <strong><code>auto</code>:</strong> irá carregar todo o arquivo de áudio assim que a página for carregada</dd>
             <dt><strong><code>controls</code></strong></dt>
             <dd>Irá apresentar o player na tela, caso não seja colocado na tag, o usuário não poderá interagir com o player e ele não aparecerá</dd>
             <dt><strong><code>autoplay</code></strong></dt>
@@ -75,7 +75,7 @@
         </audio>
         <hr>
     <h2>Video</h2>
-            <p>Podemos inserir videos em sistes usando a tag: <code>&lt;video src=""&gt;&lt;/video&gt;</code></p>
+            <p>Podemos inserir videos em sites usando a tag: <code>&lt;video src=""&gt;&lt;/video&gt;</code></p>
             <img src="img/codevideo.jpeg" alt="imagem com exemplo de código">
 
             <p><strong>Exemplo de video postado</strong></p>
@@ -83,7 +83,7 @@
                 <source src="videos/meu-video.mp4" type="video/mp4">
                 <source src="videos/meu-video.ogv" type="video/ogg">
                 <source src="videos/meu-video.webm" type="video/webm">
-                <p>Desculpe mas seu navegador não suporta esse tipo de vídeo, <a href="videos/meu-video.mp4" dawload>baixe ele aqui</a></p>
+                <p>Desculpe mas seu navegador não suporta esse tipo de vídeo, <a href="videos/meu-video.mp4" download>baixe ele aqui</a></p>
             </video>
 
             <h2>Atributos importantes</h2>
@@ -102,15 +102,15 @@
             <h2>Formatos de Vídeo suportados por cada Navegador</h2>
             <img src="img/compatibilidade de video.png" alt="Formatos de vídeo suportados por cada navegador">
             <h2>Incorporar vídeos</h2>
-            <p>Podemos usar o youtube/vimeo como serviço de hospedagem gratuita, evitando consumir os própios recursos de um host contratado para incorporar videos do youtube em HTML5 usamos a tag:<pre>&lt;iframe src="" frameborder="0"&gt;&lt;/iframe&gt;</pre> porém o youtube já nós dá isso pronto, basta apenas abrir o vídeo e clilcar em compartilhar e lá terá a opção incoporar e teremos o código em HTML5 pronto para copiar e colar, Veja a baixo o exemplo de vídeo incorporado pelo Youtube.</p>
+            <p>Podemos usar o YouTube/Vimeo como serviço de hospedagem gratuita, evitando consumir os própios recursos de um host contratado para incorporar videos do YouTube em HTML5 usamos a tag:<pre>&lt;iframe src="" frameborder="0"&gt;&lt;/iframe&gt;</pre> porém o YouTube já nós dá isso pronto, basta apenas abrir o vídeo e clicar em compartilhar e lá terá a opção incorporar e teremos o código em HTML5 pronto para copiar e colar, Veja a baixo o exemplo de vídeo incorporado pelo YouTube.</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y?si=31_0JcIQdMaasL7-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             <dl>
-                    <dt><strong>Youtube</strong></dt>
-                    <dd><em>As vantagens de hospedar no youtube são: serviços ultra rapídos porém todos os videos são públicos e disponiveis para qualquer um assistir</em></dd>
+                    <dt><strong>YouTube</strong></dt>
+                    <dd><em>As vantagens de hospedar no YouTube são: serviços ultra rápidos porém todos os videos são públicos e disponíveis para qualquer um assistir</em></dd>
                     <dt><strong>Vimeo</strong></dt>
-                    <dd><em>Serviço pago, Seletividade de quem pode ver, Serviços não tão bons quanto do youtube</em></dd>
+                    <dd><em>Serviço pago, Seletividade de quem pode ver, Serviços não tão bons quanto do YouTube</em></dd>
             </dl>
             <hr>
     <h2>Media Types</h2>
