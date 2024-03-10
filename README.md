@@ -1,1 +1,4 @@
-Resumo criado e constantemente atualizado sobre HTML5, com planajamento de adesão de informações sobre CSS, Desenvolvido por Iago Filipe durante os estudos do curso de HTML5 e CSS do cursoemvideo
+Resumo sobre HTML5 e CSS, Desenvolvido por Iago Filipe durante os estudos das tecnologias
+Esse site ainda está em desenvolvimento, foi criado no intuito de servir como anotações de meus estudos e de aplicar as tecnologia estudadas.
+
+
